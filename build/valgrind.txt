@@ -1,0 +1,200 @@
+==122284== Memcheck, a memory error detector
+==122284== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==122284== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==122284== Command: ./membot
+==122284== Parent PID: 112416
+==122284== 
+--122284-- WARNING: unhandled amd64-linux syscall: 315
+--122284-- You may be able to write your own handler.
+--122284-- Read the file README_MISSING_SYSCALL_OR_IOCTL.
+--122284-- Nevertheless we consider this a bug.  Please report
+--122284-- it at http://valgrind.org/support/bug_reports.html.
+==122284== Invalid read of size 8
+==122284==    at 0x11E62C: ChatBot::~ChatBot() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12FB37: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Address 0xaecfcd0 is 0 bytes inside a block of size 32 free'd
+==122284==    at 0x483D1CF: operator delete(void*, unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x129A1D: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12909F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Block was alloc'd at
+==122284==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12990E: ChatLogic::ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124F7F: ChatBotPanelDialog::ChatBotPanelDialog(wxWindow*, int) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1244B7: ChatBotFrame::ChatBotFrame(wxString const&) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124324: ChatBotApp::OnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1270F0: wxAppConsoleBase::CallOnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4FFA799: wxEntry(int&, wchar_t**) (in /usr/lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0.4.0)
+==122284==    by 0x124265: main (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== Invalid free() / delete / delete[] / realloc()
+==122284==    at 0x483D1CF: operator delete(void*, unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12FB44: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Address 0xaecfcd0 is 0 bytes inside a block of size 32 free'd
+==122284==    at 0x483D1CF: operator delete(void*, unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x129A1D: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12909F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Block was alloc'd at
+==122284==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12990E: ChatLogic::ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124F7F: ChatBotPanelDialog::ChatBotPanelDialog(wxWindow*, int) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1244B7: ChatBotFrame::ChatBotFrame(wxString const&) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124324: ChatBotApp::OnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1270F0: wxAppConsoleBase::CallOnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4FFA799: wxEntry(int&, wchar_t**) (in /usr/lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0.4.0)
+==122284==    by 0x124265: main (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== Conditional jump or move depends on uninitialised value(s)
+==122284==    at 0x12FB2E: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12909F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Uninitialised value was created by a heap allocation
+==122284==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12A118: ChatLogic::LoadAnswerGraphFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124FD8: ChatBotPanelDialog::ChatBotPanelDialog(wxWindow*, int) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1244B7: ChatBotFrame::ChatBotFrame(wxString const&) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124324: ChatBotApp::OnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1270F0: wxAppConsoleBase::CallOnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4FFA799: wxEntry(int&, wchar_t**) (in /usr/lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0.4.0)
+==122284==    by 0x124265: main (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== Use of uninitialised value of size 8
+==122284==    at 0x11E62C: ChatBot::~ChatBot() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12FB37: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Uninitialised value was created by a heap allocation
+==122284==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12A118: ChatLogic::LoadAnswerGraphFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124FD8: ChatBotPanelDialog::ChatBotPanelDialog(wxWindow*, int) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1244B7: ChatBotFrame::ChatBotFrame(wxString const&) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124324: ChatBotApp::OnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1270F0: wxAppConsoleBase::CallOnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4FFA799: wxEntry(int&, wchar_t**) (in /usr/lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0.4.0)
+==122284==    by 0x124265: main (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== Use of uninitialised value of size 8
+==122284==    at 0x11E638: ChatBot::~ChatBot() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12FB37: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Uninitialised value was created by a heap allocation
+==122284==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==122284==    by 0x12A118: ChatLogic::LoadAnswerGraphFromFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124FD8: ChatBotPanelDialog::ChatBotPanelDialog(wxWindow*, int) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1244B7: ChatBotFrame::ChatBotFrame(wxString const&) (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x124324: ChatBotApp::OnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1270F0: wxAppConsoleBase::CallOnInit() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4FFA799: wxEntry(int&, wchar_t**) (in /usr/lib/x86_64-linux-gnu/libwx_baseu-3.0.so.0.4.0)
+==122284==    by 0x124265: main (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== Invalid read of size 8
+==122284==    at 0x11E647: ChatBot::~ChatBot() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12FB37: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==  Address 0x73736300656d617e is not stack'd, malloc'd or (recently) free'd
+==122284== 
+==122284== 
+==122284== Process terminating with default action of signal 11 (SIGSEGV)
+==122284==  General Protection Fault
+==122284==    at 0x11E647: ChatBot::~ChatBot() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12FB37: GraphNode::~GraphNode() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x129A70: ChatLogic::~ChatLogic() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x1250EA: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x125149: ChatBotPanelDialog::~ChatBotPanelDialog() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x4CDD08B: wxWindowBase::Destroy() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4CDD0C3: wxWindowBase::DestroyChildren() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x4B15996: wxWindow::~wxWindow() (in /usr/lib/x86_64-linux-gnu/libwx_gtk3u_core-3.0.so.0.4.0)
+==122284==    by 0x12747F: wxNavigationEnabled<wxWindow>::~wxNavigationEnabled() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12750B: wxPanelBase::~wxPanelBase() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x127A4B: wxPanel::~wxPanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284==    by 0x12907F: ChatBotFrameImagePanel::~ChatBotFrameImagePanel() (in /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/build/membot)
+==122284== 
+==122284== HEAP SUMMARY:
+==122284==     in use at exit: 7,063,004 bytes in 40,146 blocks
+==122284==   total heap usage: 2,517,562 allocs, 2,477,417 frees, 192,959,061 bytes allocated
+==122284== 
+==122284== LEAK SUMMARY:
+==122284==    definitely lost: 144,384 bytes in 555 blocks
+==122284==    indirectly lost: 188,603 bytes in 7,554 blocks
+==122284==      possibly lost: 5,061 bytes in 53 blocks
+==122284==    still reachable: 6,571,964 bytes in 30,730 blocks
+==122284==                       of which reachable via heuristic:
+==122284==                         length64           : 5,688 bytes in 93 blocks
+==122284==                         newarray           : 21,568 bytes in 68 blocks
+==122284==         suppressed: 0 bytes in 0 blocks
+==122284== Rerun with --leak-check=full to see details of leaked memory
+==122284== 
+==122284== For lists of detected and suppressed errors, rerun with: -s
+==122284== ERROR SUMMARY: 7 errors from 6 contexts (suppressed: 0 from 0)
