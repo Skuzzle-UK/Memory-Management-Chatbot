@@ -118,7 +118,8 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     ////
 
     // create chat logic instance
-    _chatLogic = new ChatLogic();
+    //_chatLogic = new ChatLogic();
+    _chatLogic = std::make_unique<ChatLogic>();
 
     // pass pointer to chatbot dialog so answers can be displayed in GUI
     _chatLogic->SetPanelDialogHandle(this);
@@ -136,7 +137,9 @@ ChatBotPanelDialog::~ChatBotPanelDialog()
     ////
 
     //POSSIBLY THE BUG
-    //SOLUTION: Was trying to delete an object in memory that doesnt exist - Not conviced this is right based on the task ahead
+    //SOLUTION: Was trying to delete an object in memory that doesnt exist.
+    //solution worked before task 1, but after task 1 segmentation fault returned.
+    //Found similar line in graphnode.cpp trying to delete _chatBot and removed. Problem solved.
 
     //delete _chatLogic;
 

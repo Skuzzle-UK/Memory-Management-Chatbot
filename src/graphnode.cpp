@@ -11,7 +11,9 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+    //Spotted due to being very similar error from chatgui.cpp
+
+    //delete _chatBot; 
 
     ////
     //// EOF STUDENT CODE

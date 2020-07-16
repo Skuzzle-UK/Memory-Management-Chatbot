@@ -49,6 +49,8 @@ chatgui.h
 /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/chatgui.h
 wx/wx.h
 -
+memory
+-
 
 /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/chatlogic.cpp
 fstream
@@ -82,11 +84,23 @@ string
 chatgui.h
 /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/chatgui.h
 
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphedge.cpp
+graphnode.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphnode.h
+graphedge.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphedge.h
+
 /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphedge.h
 vector
 -
 string
 -
+
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphnode.cpp
+graphedge.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphedge.h
+graphnode.h
+/mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphnode.h
 
 /mnt/hgfs/SharedDocs/GitHub/CppND-Memory-Management-Chatbot/src/graphnode.h
 vector
