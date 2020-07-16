@@ -45,13 +45,15 @@ ChatBot::~ChatBot()
 //// STUDENT CODE
 ////
 ChatBot::ChatBot (const ChatBot &original) { //copy constructor
+    std::cout << "ChatBot Copy Constructor" << "\n";
     _image = new wxBitmap(*original._image);
     _chatLogic = original._chatLogic;
     _rootNode = original._rootNode;
-    std::cout << "ChatBot Copy Constructor" << "\n";
+    
 }
 
 ChatBot::ChatBot (ChatBot &&original) { //move constructor
+    std::cout << "ChatBot Move Constructor" << "\n";
     //copy data to new
     _image = original._image;
     _chatLogic = original._chatLogic;
@@ -61,7 +63,7 @@ ChatBot::ChatBot (ChatBot &&original) { //move constructor
     original._image = nullptr;
     original._chatLogic = nullptr;
     original._rootNode = nullptr;
-    std::cout << "ChatBot Move Constructor" << "\n";
+    
 }
 
 ChatBot &ChatBot::operator= (const ChatBot &original) { //copy assignment operator
@@ -132,7 +134,7 @@ void ChatBot::SetCurrentNode(GraphNode *node)
 {
     // update pointer to current node
     _currentNode = node;
-
+    
     // select a random node answer (if several answers should exist)
     std::vector<std::string> answers = _currentNode->GetAnswers();
     std::mt19937 generator(int(std::time(0)));
