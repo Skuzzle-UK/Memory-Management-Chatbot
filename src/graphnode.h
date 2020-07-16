@@ -46,7 +46,7 @@ public:
     void AddToken(std::string token); // add answers to list
     void AddEdgeToParentNode(GraphEdge *edge);
 
-    //// note to udacity: SHOULD PROBABLY MOVE ////STUDENT CODE here as it needs adjusting.
+    //// note to udacity: SHOULD PROBABLY MOVE ////STUDENT CODE up a line to here as it needs adjusting.
     void AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge);
 
     //// STUDENT CODE
