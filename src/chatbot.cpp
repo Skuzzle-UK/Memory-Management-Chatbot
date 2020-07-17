@@ -50,6 +50,7 @@ ChatBot::ChatBot (const ChatBot &original) { //copy constructor
     _chatLogic = original._chatLogic;
     _rootNode = original._rootNode;
     _image = new wxBitmap(*original._image);
+    _chatLogic->SetChatbotHandle(this); //Additional line from code review
     
 }
 
@@ -64,6 +65,7 @@ ChatBot::ChatBot (ChatBot &&original) { //move constructor
     original._chatLogic = nullptr;
     original._rootNode = nullptr;
     original._image = nullptr;
+    _chatLogic->SetChatbotHandle(this); //Additional line from code review
 }
 
 ChatBot &ChatBot::operator= (const ChatBot &original) { //copy assignment operator
@@ -75,6 +77,7 @@ ChatBot &ChatBot::operator= (const ChatBot &original) { //copy assignment operat
     _chatLogic = original._chatLogic;
     _rootNode = original._rootNode;
     _image = new wxBitmap(*original._image);
+    _chatLogic->SetChatbotHandle(this); //Additional line from code review
     return *this;
 }
 
@@ -87,7 +90,7 @@ ChatBot &ChatBot::operator= (ChatBot &&original) { //move assignment operator
     _chatLogic = original._chatLogic;
     _rootNode = original._rootNode;
     _image = original._image;
-
+    _chatLogic->SetChatbotHandle(this); //Additional line from code review
 
     original._chatLogic = nullptr;
     original._rootNode = nullptr;
